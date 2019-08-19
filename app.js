@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname,"/public")));
 app.set("views","./src/views");
 app.set("view engine","ejs");
 
-app.listen("8080",function()
+app.listen(process.env.PORT || "8080",function()
 {
     console.log("Server started.");
 })
